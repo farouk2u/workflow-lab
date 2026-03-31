@@ -1,0 +1,22 @@
+
+name: CI/CD Pipeline
+run-name: CI/CD on ${{ github.ref_name }}
+
+on:
+  pull_request: [ main ]
+  push: [ main ]
+
+jobs:
+  build-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one line hello
+        run: echo Hello world from Build Api Step 
+
+      - name: Run multi lines commands
+        run: |
+          echo Multi lines : First cmd 
+          echo Multi lines : Second cmd  
