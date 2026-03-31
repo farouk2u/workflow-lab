@@ -3,8 +3,8 @@ name: CI/CD Pipeline
 run-name: CI/CD on ${{ github.ref_name }}
 
 on:
-  pull_request: [ main ]
-  push: [ main ]
+  pull_request: [ "main" ]
+  push: [ "main" ]
 
 jobs:
   build-api:
